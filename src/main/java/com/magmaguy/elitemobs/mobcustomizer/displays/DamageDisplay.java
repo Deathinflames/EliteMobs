@@ -87,7 +87,9 @@ public class DamageDisplay implements Listener {
         armorStand.setVisible(false);
         armorStand.setMarker(true);
         int newDisplayDamage = (int) damage;
-        armorStand.setCustomName(ChatColor.RED + "" + ChatColor.BOLD + "" + newDisplayDamage + "");
+        String symbol;
+        symbol = "\u2764";
+        armorStand.setCustomName(ChatColor.RED + "-" + newDisplayDamage + " " + symbol);
         armorStand.setCustomNameVisible(true);
         armorStand.setGravity(false);
         MetadataHandler.registerMetadata(armorStand, MetadataHandler.ARMOR_STAND_DISPLAY, true);

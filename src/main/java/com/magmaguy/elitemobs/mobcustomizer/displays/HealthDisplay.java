@@ -81,7 +81,7 @@ public class HealthDisplay implements Listener {
 
         armorStand.setVisible(false);
         armorStand.setMarker(true);
-        armorStand.setCustomName(setHealthColor(currentHealth, maxHealth) + "" + currentHealth + "/" + maxHealth);
+        armorStand.setCustomName(setHealthColor(currentHealth, maxHealth) + " " + currentHealth);
         armorStand.setCustomNameVisible(true);
         armorStand.setGravity(false);
         MetadataHandler.registerMetadata(armorStand, MetadataHandler.ARMOR_STAND_DISPLAY, true);
@@ -119,35 +119,44 @@ public class HealthDisplay implements Listener {
     /*
     Color progression: Dark green - Green - Red - Dark red
      */
-    private static ChatColor setHealthColor(int currentHealth, int maxHealth) {
+    private static String setHealthColor(int currentHealth, int maxHealth) {
 
         double healthPercentage = currentHealth * 100 / maxHealth;
 
-        if (healthPercentage > 75) {
+        String symbol;
+        symbol = "\u2764";
 
-            return ChatColor.DARK_GREEN;
+        if (healthPercentage > 85) {
+
+            return ChatColor.RED + symbol + ChatColor.DARK_GREEN;
 
         }
 
-        if (healthPercentage > 50) {
+        if (healthPercentage > 70) {
 
-            return ChatColor.GREEN;
+            return ChatColor.RED + symbol + ChatColor.GREEN;
+
+        }
+
+        if (healthPercentage > 40) {
+
+            return ChatColor.RED + symbol + ChatColor.YELLOW;
 
         }
 
         if (healthPercentage > 25) {
 
-            return ChatColor.RED;
+            return ChatColor.RED + symbol + ChatColor.RED;
 
         }
 
         if (healthPercentage > 0) {
 
-            return ChatColor.DARK_RED;
+            return ChatColor.RED + symbol + ChatColor.DARK_RED;
 
         }
 
-        return ChatColor.DARK_RED;
+        return ChatColor.RED + symbol + ChatColor.DARK_RED;
 
     }
 

@@ -33,7 +33,6 @@ import com.magmaguy.elitemobs.playerdata.PlayerData;
 import com.magmaguy.elitemobs.runnables.*;
 import com.magmaguy.elitemobs.versionnotifier.VersionChecker;
 import com.magmaguy.elitemobs.versionnotifier.VersionWarner;
-import org.bstats.Metrics;
 import org.bukkit.Bukkit;
 import org.bukkit.World;
 import org.bukkit.entity.Arrow;
@@ -50,9 +49,6 @@ public class EliteMobs extends JavaPlugin {
 
     @Override
     public void onEnable() {
-
-        //Enable stats
-        Metrics metrics = new Metrics(this);
 
         //Load loot from config
         ConfigValues.intializeConfigurations();

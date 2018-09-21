@@ -61,57 +61,44 @@ public class NameHandler {
 
         switch (entity.getType()) {
             case ZOMBIE:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(0)) + mobLevel
-                        + (chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(1))));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(1)) + " "  + "§6[Lv." + " " + mobLevel + "§6]" + (chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(0))));
                 break;
             case ZOMBIE_VILLAGER:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(1)));
                 //TODO: separate zombies from zombie
                 break;
             case SKELETON:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Skeleton").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Skeleton").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Skeleton").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Skeleton").get(1)));
                 break;
             case WITHER_SKELETON:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.WitherSkeleton").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.WitherSkeleton").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.WitherSkeleton").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.WitherSkeleton").get(1)));
                 break;
             case PIG_ZOMBIE:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PigZombie").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PigZombie").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PigZombie").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PigZombie").get(1)));
                 break;
             case CREEPER:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Creeper").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Creeper").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Creeper").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Creeper").get(1)));
                 break;
             case SPIDER:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Spider").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Spider").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Spider").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Spider").get(1)));
                 break;
             case ENDERMAN:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Enderman").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Enderman").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Enderman").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Enderman").get(1)));
                 break;
             case CAVE_SPIDER:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.CaveSpider").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.CaveSpider").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.CaveSpider").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.CaveSpider").get(1)));
                 break;
             case SILVERFISH:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Silverfish").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Silverfish").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Silverfish").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Silverfish").get(1)));
                 break;
             case BLAZE:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Blaze").get(0)) + mobLevel
-                        + TRANSLATION_CONFIG.getStringList("Elite Mob Names.Blaze").get(1));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Blaze").get(0)) + mobLevel + TRANSLATION_CONFIG.getStringList("Elite Mob Names.Blaze").get(1));
                 break;
             case WITCH:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Witch").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Witch").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Witch").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Witch").get(1)));
                 break;
             case IRON_GOLEM:
-                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.IronGolem").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.IronGolem").get(1)));
+                entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.IronGolem").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.IronGolem").get(1)));
                 break;
         }
 
@@ -121,8 +108,7 @@ public class NameHandler {
         if (!currentVersionIsUnder(1, 8))
             switch (entity.getType()) {
                 case ENDERMITE:
-                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Endermite").get(0)) + mobLevel
-                            + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Endermite").get(1)));
+                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Endermite").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Endermite").get(1)));
                     break;
             }
 
@@ -132,24 +118,19 @@ public class NameHandler {
         if (!currentVersionIsUnder(1, 11))
             switch (entity.getType()) {
                 case STRAY:
-                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Stray").get(0)) + mobLevel
-                            + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Stray").get(1)));
+                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Stray").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Stray").get(1)));
                     break;
                 case HUSK:
-                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Husk").get(0)) + mobLevel
-                            + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Husk").get(1)));
+                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Husk").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Husk").get(1)));
                     break;
                 case VEX:
-                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Vex").get(0)) + mobLevel
-                            + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Vex").get(1)));
+                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Vex").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Vex").get(1)));
                     break;
                 case VINDICATOR:
-                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Vindicator").get(0)) + mobLevel
-                            + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Vindicator").get(1)));
+                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Vindicator").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Vindicator").get(1)));
                     break;
                 case POLAR_BEAR:
-                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PolarBear").get(0)) + mobLevel
-                            + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PolarBear").get(1)));
+                    entity.setCustomName(chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PolarBear").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PolarBear").get(1)));
                     break;
             }
 
@@ -180,73 +161,56 @@ public class NameHandler {
 
         switch (entity.getType()) {
             case ZOMBIE:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(0)) + mobLevel
-                        + (chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(1)));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(0)) + mobLevel + (chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(1)));
                 break;
             case HUSK:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Husk").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Husk").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Husk").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Husk").get(1));
                 break;
             case ZOMBIE_VILLAGER:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Zombie").get(1));
                 //TODO: separate zombies from zombie
                 break;
             case SKELETON:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Skeleton").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Skeleton").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Skeleton").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Skeleton").get(1));
                 break;
             case WITHER_SKELETON:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.WitherSkeleton").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.WitherSkeleton").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.WitherSkeleton").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.WitherSkeleton").get(1));
                 break;
             case STRAY:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Stray").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Stray").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Stray").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Stray").get(1));
                 break;
             case PIG_ZOMBIE:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PigZombie").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PigZombie").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PigZombie").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PigZombie").get(1));
                 break;
             case CREEPER:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Creeper").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Creeper").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Creeper").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Creeper").get(1));
                 break;
             case SPIDER:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Spider").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Spider").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Spider").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Spider").get(1));
                 break;
             case ENDERMAN:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Enderman").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Enderman").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Enderman").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Enderman").get(1));
                 break;
             case CAVE_SPIDER:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.CaveSpider").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.CaveSpider").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.CaveSpider").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.CaveSpider").get(1));
                 break;
             case SILVERFISH:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Silverfish").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Silverfish").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Silverfish").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Silverfish").get(1));
                 break;
             case BLAZE:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Blaze").get(0)) + mobLevel
-                        + TRANSLATION_CONFIG.getStringList("Elite Mob Names.Blaze").get(1);
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Blaze").get(0)) + mobLevel + TRANSLATION_CONFIG.getStringList("Elite Mob Names.Blaze").get(1);
                 break;
             case WITCH:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Witch").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Witch").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Witch").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Witch").get(1));
                 break;
             case ENDERMITE:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Endermite").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Endermite").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Endermite").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.Endermite").get(1));
                 break;
             case POLAR_BEAR:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PolarBear").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PolarBear").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PolarBear").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.PolarBear").get(1));
                 break;
             case IRON_GOLEM:
-                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.IronGolem").get(0)) + mobLevel
-                        + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.IronGolem").get(1));
+                theoreticalName = chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.IronGolem").get(0)) + mobLevel + chatColorConverter(TRANSLATION_CONFIG.getStringList("Elite Mob Names.IronGolem").get(1));
                 break;
             default:
                 theoreticalName = "";
